@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{30CA45C9-7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APAC.Garb.Data", "src\APAC.Garb.Data\APAC.Garb.Data.csproj", "{777C8589-C537-4FDA-817C-3AD9BDCBAE90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APAC.Garb.Business", "APAC.Garb.Business\APAC.Garb.Business.csproj", "{9A748F10-FDA1-4D0D-B6A3-D0D22B42804F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APAC.Garb.Business", "src\APAC.Garb.Business\APAC.Garb.Business.csproj", "{9A748F10-FDA1-4D0D-B6A3-D0D22B42804F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APAC.Garb.Service", "src\APAC.Garb.Service\APAC.Garb.Service.csproj", "{242C5390-0634-42C5-89FB-CC98F32D83F8}"
 EndProject
