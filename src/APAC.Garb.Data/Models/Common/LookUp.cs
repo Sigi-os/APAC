@@ -9,6 +9,6 @@ namespace APAC.Garb.Data.Models.Common
         /// <inheritdocs />
         public int Id { get; set; }
         public String Name { get; set;  }
-        public String Code { get; set; }
+        public String Code { get; set; } 
     }
 }
