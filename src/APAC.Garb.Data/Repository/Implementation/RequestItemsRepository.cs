@@ -1,4 +1,5 @@
 ﻿using APAC.Garb.Data.DbContexts;
+using APAC.Garb.Data.DbContexts.Implementations;
 using APAC.Garb.Data.Models.Definition.Common;
 using APAC.Garb.Data.Repository.Definition;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,7 @@ namespace APAC.Garb.Data.Repository.Implementation
 
         public RequestItemsRepository(RequestItemContext context, ILogger<RequestItemsRepository> logger)
         {
-            _context = _context ?? throw new ArgumentNullException(nameof(context));
+            _context = context ?? throw new ArgumentNullException(nameof(context));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
@@ -30,12 +31,17 @@ namespace APAC.Garb.Data.Repository.Implementation
             try
             {
                 var result = await _context.RequestItems.ToListAsync();
-            }            
+                return result;
+            }   
+            catch(Exception ex)
+            {
+                _logger.LogError("Error Occured", ex.Message);
+                throw new Exception("Occured in Repo", ex);
+            }
             finally
             {
                 _logger.LogDebug($"Successful Ending - {methodName}");
-            }
-            return requestItems;
+            }           
         }
     }
 }
