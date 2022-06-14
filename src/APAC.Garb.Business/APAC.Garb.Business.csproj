@@ -5,9 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Components\" />
-    <Folder Include="Models\" />
     <Folder Include="Utility\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APAC.Garb.Data\APAC.Garb.Data.csproj" />
   </ItemGroup>
 
 </Project>
